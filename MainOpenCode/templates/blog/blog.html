@@ -4,18 +4,21 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Mini-Blog</title>
+  <title>Open-Code</title>
   <link rel="stylesheet" href="{% static 'style/style.css' %}" charset="UTF-8">
 </head>
 <body>
   <header>
-    <h1>Mini-Blog</h1>
+    <h1>Open-Code</h1>
   </header>
 
   <main>
     <div class="blog-container">
       {% for post in post_list %}
         <article class="post">
+          {% if post.image %}
+            <img src="{{ post.image.url }}" alt="{{ post.title }}" class="post-image">
+          {% endif %}
           <h2>{{ post.title }}</h2>
           <div class="post-meta">
             <span class="author">{{ post.author }}</span>
@@ -28,7 +31,7 @@
   </main>
 
   <footer>
-    <p>&copy; 2024 Mini-Blog</p>
+    <p>&copy; 2024 Open-Code</p>
   </footer>
 </body>
 </html>

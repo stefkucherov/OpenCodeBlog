@@ -5,14 +5,15 @@ body {
 }
 
 header {
-  background-color: #1f45ff;
-  color: ;
+  background-color: #9bcb57;
+  color: #333;
   padding: 20px;
   text-align: center;
 }
 
 h1 {
   margin: 0;
+  color: #333;
 }
 
 main {
@@ -36,6 +37,7 @@ main {
 .post h2 {
   font-size: 24px;
   margin-top: 0;
+  color: #333;
 }
 
 .post-meta {
@@ -52,12 +54,20 @@ main {
   font-size: 16px;
   line-height: 1.5;
   margin-bottom: 20px;
+  color: #333;
+}
+
+.post-image {
+  max-width: 100%;
+  height: auto;
+  margin-bottom: 20px;
+  display: block;
 }
 
 .read-more {
   display: inline-block;
   padding: 8px 15px;
-  background-color: #1f45ff;
+  background-color: #9bcb57;
   color: #fff;
   text-decoration: none;
   border-radius: 5px;
@@ -65,7 +75,7 @@ main {
 }
 
 .read-more:hover {
-  background-color: #0033cc;
+  background-color: #7da946;
 }
 
 footer {
