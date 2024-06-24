@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en ru">
+{% load static %}
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mini-Blog</title>
+  <link rel="stylesheet" href="{% static 'style/style.css' %}" charset="UTF-8">
+</head>
+<body>
+  <header>
+    <h1>Mini-Blog</h1>
+  </header>
+
+  <main>
+    <div class="blog-container">
+      {% for post in post_list %}
+        <article class="post">
+          <h2>{{ post.title }}</h2>
+          <div class="post-meta">
+            <span class="author">{{ post.author }}</span>
+            <span class="date">{{ post.date }}</span>
+          </div>
+          <p>{{ post.description }}</p>
+        </article>
+      {% endfor %}
+    </div>
+  </main>
+
+  <footer>
+    <p>&copy; 2024 Mini-Blog</p>
+  </footer>
+</body>
+</html>
