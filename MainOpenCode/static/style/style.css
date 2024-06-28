@@ -2,18 +2,20 @@ body {
   font-family: Helvetica, sans-serif;
   background-color: #f5f5f5;
   color: #333;
+  margin: 0;
+  padding: 0;
 }
 
 header {
   background-color: #9bcb57;
-  color: #333;
+  color: #fff;
   padding: 20px;
   text-align: center;
 }
 
 h1 {
   margin: 0;
-  color: #333;
+  color: #fff;
 }
 
 main {
@@ -64,17 +66,21 @@ main {
   display: block;
 }
 
-.read-more {
-  display: inline-block;
-  padding: 8px 15px;
+.add-post {
+  display: block;
+  width: 100%;
+  padding: 10px;
   background-color: #9bcb57;
   color: #fff;
+  text-align: center;
   text-decoration: none;
   border-radius: 5px;
+  font-size: 16px;
+  margin-top: 20px;
   transition: background-color 0.3s ease;
 }
 
-.read-more:hover {
+.add-post:hover {
   background-color: #7da946;
 }
 
@@ -83,4 +89,7 @@ footer {
   color: #333;
   padding: 20px;
   text-align: center;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
 }

@@ -18,22 +18,7 @@
       <h1>Добавить новую статью</h1>
       <form method="post" enctype="multipart/form-data">
         {% csrf_token %}
-        <div class="form-group">
-          <label for="title">Заголовок</label>
-          <input type="text" class="form-control" id="title" name="title">
-        </div>
-        <div class="form-group">
-          <label for="description">Содержание</label> <!-- Исправлено с "content" на "description" для соответствия модели -->
-          <textarea class="form-control" id="description" name="description" rows="5"></textarea>
-        </div>
-        <div class="form-group">
-          <label for="author">Автор</label>
-          <input type="text" class="form-control" id="author" name="author">
-        </div>
-        <div class="form-group">
-          <label for="image">Изображение</label>
-          <input type="file" class="form-control-file" id="image" name="image">
-        </div>
+        {{ form.as_p }}
         <button type="submit" class="btn btn-primary">Сохранить</button>
       </form>
     </div>
