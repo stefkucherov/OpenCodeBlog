@@ -8,16 +8,16 @@ from BlogOpenCode.forms import PostForm
 from django.views.generic import ListView
 from .models import Post
 
+from django.shortcuts import render, redirect
+from django.views.generic import ListView
+from .models import Post
+from .forms import PostForm
 
-class PostViev(ListView):
+
+class PostListView(ListView):
     model = Post
     template_name = 'blog/blog.html'
     context_object_name = 'post_list'
-
-
-def blog_list(request):
-    posts = Post.objects.all()
-    return render(request, 'blog/blog.html', {'post_list': posts})
 
 
 def create_post(request):
@@ -26,6 +26,8 @@ def create_post(request):
         if form.is_valid():
             form.save()
             return redirect('blog_list')
+        else:
+            print(form.errors)  # Вывод ошибок формы в консоль для отладки
     else:
         form = PostForm()
     return render(request, 'blog/create_post.html', {'form': form})
