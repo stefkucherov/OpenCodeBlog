@@ -1,96 +1,122 @@
 body {
-  font-family: Helvetica, sans-serif;
-  background-color: #f5f5f5;
-  color: #333;
-  margin: 0;
-  padding: 0;
+    font-family: Helvetica, sans-serif;
+    background-color: #f5f5f5;
+    color: #333;
+    margin: 0;
+    padding: 0;
 }
 
 header {
-  background-color: #9bcb57;
-  color: #fff;
-  padding: 20px;
-  text-align: center;
+    background-color: #9bcb57;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
-h1 {
-  margin: 0;
-  color: #fff;
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+header h1 {
+    margin: 0;
+    color: #fff;
+}
+
+header nav {
+    display: flex;
+    gap: 10px; /* Расстояние между кнопками */
+}
+
+header nav a {
+    display: inline-block;
+    color: #333;
+    text-decoration: none;
+    padding: 10px 15px;
+    background-color: #fff;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+header nav a:hover {
+    background-color: #333;
 }
 
 main {
-  padding: 20px;
-  min-height: calc(100vh - 140px); /* Учитывает высоту header и footer */
+    padding: 20px;
+    min-height: calc(100vh - 140px); /* Учитывает высоту header и footer */
 }
 
 .blog-container {
-  max-width: 800px;
-  margin: 0 auto;
-  padding: 20px;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
 }
 
 .post {
-  background-color: #fff;
-  margin-bottom: 20px;
-  border-radius: 5px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  padding: 20px;
+    background-color: #fff;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 20px;
 }
 
 .post h2 {
-  font-size: 24px;
-  margin-top: 0;
-  color: #333;
+    font-size: 24px;
+    margin-top: 0;
+    color: #333;
 }
 
 .post-meta {
-  font-size: 14px;
-  color: #666;
-  margin-bottom: 10px;
+    font-size: 14px;
+    color: #666;
+    margin-bottom: 10px;
 }
 
 .post-meta span {
-  margin-right: 10px;
+    margin-right: 10px;
 }
 
 .post p {
-  font-size: 16px;
-  line-height: 1.5;
-  margin-bottom: 20px;
-  color: #333;
+    font-size: 16px;
+    line-height: 1.5;
+    margin-bottom: 20px;
+    color: #333;
 }
 
 .post-image {
-  max-width: 100%;
-  height: auto;
-  margin-bottom: 20px;
-  display: block;
-}
-
-.add-post {
-  display: block;
-  width: 100%;
-  padding: 10px;
-  background-color: #9bcb57;
-  color: #fff;
-  text-align: center;
-  text-decoration: none;
-  border-radius: 5px;
-  font-size: 16px;
-  margin-top: 20px;
-  transition: background-color 0.3s ease;
-}
-
-.add-post:hover {
-  background-color: #7da946;
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 20px;
+    display: block;
 }
 
 footer {
-  background-color: #f5f5f5;
-  color: #333;
-  padding: 20px;
-  text-align: center;
-  width: 100%;
-  position: relative;
-  bottom: 0;
+    background-color: #f5f5f5;
+    color: #333;
+    padding: 20px;
+    text-align: center;
+    width: 100%;
+    position: relative;
+    bottom: 0;
+}
+
+.btn.btn-white {
+    background-color: #fff;
+    color: #333;
+    border: 1px solid #ccc;
+    padding: 10px 15px;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.btn.btn-white:hover {
+    background-color: #e1e1e1;
 }

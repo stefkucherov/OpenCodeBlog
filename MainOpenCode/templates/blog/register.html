@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="ru">
+{% load static %}
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Регистрация</title>
+    <link rel="stylesheet" href="{% static 'style/style.css' %}">
+    <link rel="stylesheet" href="{% static 'style/auth.css' %}">
+</head>
+<body>
+    <header>
+        <h1>Регистрация</h1>
+        <nav>
+            <a href="{% url 'login' %}">Войти</a>
+        </nav>
+    </header>
+    <main>
+        <div class="form-container">
+            <form method="POST">
+                {% csrf_token %}
+                {{ form.as_p }}
+                 <button type="submit" class="btn btn-primary">Зарегистрироваться</button>
+            </form>
+        </div>
+
+    </main>
+    <footer>
+        <p>&copy; 2024 Open-Code</p>
+    </footer>
+</body>
+</html>
+
